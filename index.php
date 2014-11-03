@@ -5,10 +5,8 @@
 		echo "Hello, $name";
 	});
 	
-	$app->get('/', function () {
-		echo "Index";
-	});
-
+	
+	
 	$app->run();
 ?>
 
