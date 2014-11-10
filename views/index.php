@@ -6,10 +6,14 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./assets/js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="./assets/js/search.js"></script>
+	<script src="http://connect.facebook.net/fr_FR/all.js"></script> <!-- cherché javascript -->
 </head>
-
+<?php
+include('include/connexionFB.php');
+?>
 
 <body>
+<div id="fb-root"></div> <!-- chargé le contenu javascript -->
 	<div id="header">
 		<div id="content_header">
 		 	<div id="connection"> <img src="./assets/img/connection.png"> </div>
@@ -328,3 +332,4 @@
 -->
 	</div>
 </body>		
+
