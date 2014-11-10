@@ -1,0 +1,580 @@
+@font-face {
+    font-family: AvenirFont;
+    src: url(../font/avenir-next-regular.woff);
+}
+
+
+body
+{
+	    width: 100%;
+	    margin: 0;
+	    padding: 0;
+	    background:url("../img/bg.png");  
+}
+
+#header
+{
+		width: 100%;
+		height: 40px;
+		background-image: url("../img/bg_header.png");
+		background-repeat: repeat-x; 
+}
+
+#content_header
+{
+		width: 90%;
+		height: 60px;
+		margin:  auto;
+}
+
+#top_barre
+{
+		width: 100%;
+}
+
+#logo
+{
+		float: left;
+		display: inline-block;
+		margin-top: 10px;
+}
+
+#logo img
+{
+	width : 100px;
+}
+
+#space_1
+{
+		display: inline-block;
+		width: 100px;
+}
+
+#search_
+{
+		display: inline-block;
+		height: 20px;
+		
+		background-color: white;
+		margin-top: 10px;
+}
+
+#space
+{
+		display: inline-block;
+		width: 100px;
+}
+
+.search_data
+{
+		width: 240px;
+		height: 8px;
+		border: 0px;
+		padding-left: 4px; 
+		padding-bottom: 5px;
+}
+
+.btn-right-fleche
+{
+		margin-left:-6px;
+		background: red;
+}
+
+.form-wrapper button 
+{
+	    position: relative;
+	    float: right;
+	    border: 0;
+	    cursor: pointer;
+	    height: 20px;
+	    width: 100px;
+	    font: bold 10px'lucida sans', 'trebuchet MS', 'Tahoma';
+	    color: #fff;
+	    text-transform: uppercase;
+	    background: #d83c3c;  
+}  
+   
+.form-wrapper button:hover
+{    
+    	background: #e54040;
+}  
+   
+.form-wrapper button:active,
+.form-wrapper button:focus
+{  
+	    background: #c42f2f;
+	    outline: 0;  
+}
+ 
+.form-wrapper button:before 
+{
+	    content: '';
+	    position: absolute;
+	    border-width: 8px 8px 8px 0;
+	    border-style: solid solid solid none;
+	    border-color: transparent #d83c3c transparent;
+	    top: 2px;
+	    left: -6px;
+}
+ 
+.form-wrapper button:hover:before
+{
+	    border-right-color: #e54040;
+}
+ 
+.form-wrapper button:focus:before,
+.form-wrapper button:active:before
+{
+        border-right-color: #c42f2f;
+}     
+ 
+.form-wrapper button::-moz-focus-inner 
+{
+	    border: 0;
+	    padding: 0;
+}
+
+.autocomplete-suggestions 
+{ 
+		border: 1px solid #414141; 	
+		background: #FFF; 
+		overflow: auto; 
+		cursor:  default;
+}
+
+.autocomplete-suggestion 
+{ 
+		padding: 2px 5px; 
+		white-space: nowrap; 
+		overflow: hidden; 
+		cursor:  default;
+}
+
+.autocomplete-selected 
+{ 	
+		background: #F0F0F0; 
+		cursor:  default;
+}
+
+.autocomplete-suggestions strong 
+{ 
+		font-weight: normal; 
+		color: #3399FF;
+		cursor:  default; 
+}   
+
+#menu
+{
+		display: inline-block;
+}
+
+#menu ul 
+{  
+        padding: 0;
+        border:0;
+        display: inline-block;
+        float: left;
+        margin-top: 12px;
+}
+
+
+#menu li
+{
+		vertical-align: top;
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 13px;
+        display: inline-block;
+        margin-left: 80px;
+        margin-top: -10px;
+}
+
+#menu ul li a
+{
+        text-decoration: none;
+        height: 35px;
+        display: inline-block;
+        text-align: center;
+        font-family: arial;
+        color: white;
+        display: inline-block;
+}
+
+#space_3
+{
+		display: inline-block;
+		width: 50px;
+}
+
+
+#connection
+{
+		float: right;
+		margin-top: 10px;
+}
+
+#connection img 
+{
+		width : 22px;
+}
+
+
+
+
+
+
+
+
+
+#content_top_game
+{
+		width: 1500px;
+		margin: auto;
+		margin-top: 20px;
+		background-color: black;
+		height : 320px;
+		margin-bottom: 30px;
+}
+
+
+#block_left
+{
+		border : 5px solid #414141;
+		width: 270px; /* 16% */
+		padding : 10px;
+		height : 100%;
+		background-color: white;
+		display: inline-block;
+		vertical-align: top;
+}
+
+
+#content_top_block_left
+{
+		position: relative;
+		
+}
+
+#content_top_block_left .game_img 
+{
+		width : 100%;
+}
+
+#logo_block_left
+{
+	width : 120px;
+	height : 30px;
+	position: absolute;
+	top : 0;
+	right : 0;
+	background-color: rgba(255,255,255,0.85);
+	padding: 0px 2px 0px 2px
+}
+
+#logo_block_left img
+{
+	
+	width : 25px;
+	margin : 2px;
+	
+}
+
+#games_name
+{
+	font-family: AvenirFont;
+	font-size: 17px;
+	margin-top: 5px;
+	color : #c10303;
+}
+
+#block_middle
+{
+	text-align: justify;
+	border : 5px solid #414141;
+	border-left : 0;
+		width: 900px; /* 60% */
+		padding : 10px;
+		background-color: white;
+		display: inline-block;
+		vertical-align: top;
+		margin-left: -5px;
+		min-height: 250px;
+		height: 100%;
+	
+}
+
+#content_top_block_middle
+{
+	font-family: AvenirFont;
+	font-size: 27px;
+}
+
+#content_top_block_middle .sous_titre
+{
+	font-size: 23px;
+	color : #777777;
+	margin-left: 20px;
+}
+
+#content_middle_block_middle
+{
+	overflow: hidden;
+	max-height: 215px;
+	font-family: Arial;
+	font-size: 15px;
+	width : 100%;
+}
+
+#content_bottom_block_middle
+{
+	height : 60px;
+	width : 100%;
+}
+
+#content_bottom_block_middle a
+{
+	font-size: 16px;
+	text-decoration: none;
+	font-family: AvenirFont;
+}
+
+#content_bottom_block_middle .learnmore
+{
+	
+	color : #414141;
+	display: block;
+	margin : 10px 0px 20px 0px;
+	transition : 1s;
+}
+
+#content_bottom_block_middle .learnmore:hover
+{
+	color : #c60000;
+}
+
+#content_bottom_block_middle .category
+{
+	color : white;
+	background-color: #c60000;
+	padding : 1px 13px 1px 13px;
+	margin : 0px 20px 0px 0px;
+	border-radius: 1px;
+}
+
+#block_right
+{
+	border : 5px solid #414141;
+	border-left: none;
+	margin-left: -5px;
+		width: 252px;
+		padding : 10px;
+		height : 100%;
+		background-color: white;
+		display: inline-block;
+			overflow: scroll;
+}
+
+#content_top_block_top
+{
+	background-color: #414141;
+	width : 100%;
+	text-align: center;
+	color : white;
+	padding : 5px 10px 5px 10px;
+	margin-left: -10px;
+	margin-top: -10px;
+	font-family: AvenirFont;
+	font-size: 18px;
+	margin-bottom: 20px;
+
+}
+
+.content_middle_block_top_img
+{
+	width : 110px;
+	display: inline-block;
+	margin-left: 8px;
+	margin-right: 3px;
+	
+}
+
+
+
+.content_middle_block_top_img img
+{
+	width : 100%;
+}
+
+.content_middle_block_top_img h3
+{
+	font-family: AvenirFont;
+	font-size: 11px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	color : #c60000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#content_middle
+{
+		width: 1500px;
+		margin: 20px auto;
+}
+
+.content_middle_left
+{
+		width: 780px;
+		display: inline-block;
+		margin-top: 30px;
+		margin-left: -40px;
+		
+}
+
+.content_middle_right
+{
+			width: 780px;
+		display: inline-block;
+		margin-top: 30px;
+		margin-left: -25px;
+		
+}
+
+
+
+.content_middle_left .title_content
+{
+		font-family: AvenirFont;
+		font-size: 27px;
+		margin-top: 5px;
+		margin-bottom: 15px;
+		margin-left: 40px;
+}
+
+.content_middle_right .title_content
+{
+		font-family: AvenirFont;
+		font-size: 27px;
+		margin-top: 5px;
+		margin-bottom: 15px;
+		margin-left: 40px;
+}
+
+.content_middle_left .block_content_game
+{
+		width: 190px;
+		background-color: white;
+		margin-left: 40px;
+		display: inline-block;	
+		padding : 8px;	
+		border-radius: 1px;
+		margin-bottom: 30px;
+		margin-top: 15px;
+
+}
+
+.content_middle_right .block_content_game
+{
+		width: 190px;
+		background-color: white;
+		margin-left: 40px;
+		display: inline-block;	
+		padding : 8px;	
+		border-radius: 1px;
+		margin-bottom: 30px;
+		margin-top: 15px;
+}
+
+.block_content_game:hover
+{
+	-webkit-box-shadow: inset 0 1px 0 #e3e3e3;
+	
+}
+
+
+
+.logo_block_bottom
+{
+	width : 95px;
+	height : 24px;
+	position: absolute;
+	top : 0;
+	right : 0;
+	background-color: rgba(255,255,255,0.85);
+	padding: 0px 2px 0px 2px;
+}
+
+.logo_block_bottom img
+{
+	margin : 2px;
+	width : 19px;
+}
+
+
+.block_content_game_img
+{
+		width: 100%;
+		display: inline-block;
+		position: relative;
+}
+
+.block_content_game_img .block_bottom_game_img
+{
+	width: 100%;
+	display: inline-block;
+}
+
+
+
+
+
+.content_middle_title
+{
+	font-family: AvenirFont;
+	font-size: 16px;
+	margin-top: 2px;
+	color : #c10303;
+}
+
+
+.categories
+{
+		display: inline-block;
+		padding-top: 5px;
+		
+}
+
+.categories .categorie_middle
+{
+		color : white;
+	background-color: #c60000;
+	padding : 1px 10px 1px 10px;
+	margin : 0px 20px 0px 0px;
+	border-radius: 1px;
+	font-size: 15px;
+	font-family: AvenirFont;
+	text-decoration: none;
+	
+}
+
+<div class="content_middle_right">
+			<div class="title_content"> Les plus populaires </div>
+			<div class="block_content_game">
+				<div class="block_content_game_img"> <img src="img/AssassinScreedMiddle.png">
+					<div class="block_content_game_img_icon"> </div>
+				</div>
+			<div class="content_middle_title"> Assassin's creed </div>
+			<div class="categories">
+				<div class="content_categories"> Aventure </div>
+				<div class="content_categories"> Action </div>
+			</div>
+			</div>
