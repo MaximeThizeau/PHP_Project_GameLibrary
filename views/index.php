@@ -6,10 +6,10 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./assets/js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="./assets/js/search.js"></script>
-	<script src="http://connect.facebook.net/fr_FR/all.js"></script> <!-- cherché javascript -->
+	<script src="http://connect.facebook.net/fr_FR/all.js"></script> 
 </head>
 <?php
-include('include/connexionFB.php');
+/* include('/include/connexionFB.php'); */
 ?>
 
 <body>
