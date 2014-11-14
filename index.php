@@ -11,5 +11,10 @@ require 'vendor/autoload.php';
 	$app->get('/', function() use ($app) {
 	$app->render('index.php');
 	});
+	
+		$app->get('/game', function() use ($app) {
+	$app->render('game-page.html');
+	});
+	
 $app->run();
 ?>

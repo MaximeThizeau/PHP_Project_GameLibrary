@@ -566,15 +566,134 @@ body
 	
 }
 
-<div class="content_middle_right">
-			<div class="title_content"> Les plus populaires </div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <img src="img/AssassinScreedMiddle.png">
-					<div class="block_content_game_img_icon"> </div>
-				</div>
-			<div class="content_middle_title"> Assassin's creed </div>
-			<div class="categories">
-				<div class="content_categories"> Aventure </div>
-				<div class="content_categories"> Action </div>
-			</div>
-			</div>
+
+
+
+/*  Page Game  */
+
+#corps-game 
+{
+		width: 1500px;
+		margin: auto;
+		margin-top: 40px;
+		background-color: white;
+		height : 780px;
+}
+
+#menu-game
+{
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 27px;
+}
+
+#menu-game ul li
+{
+	display: inline-block;
+	font-family: AvenirFont;
+	font-size: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+#menu-game ul li img
+{
+	height : 22px;
+	margin-bottom: -2px;
+}
+
+#menu-game ul .buy-menu
+{
+	color : #d83c3c;
+}
+
+#menu-game .border-menu
+{
+	color: #cecece;
+	opacity: 0.7;
+}
+
+#menu-game ul li a
+{
+	color : black;
+	text-decoration: none;
+	transition : 0.3s;
+}
+
+#menu-game ul li a:hover
+{
+	color : #d83c3c;
+}
+
+#corps-game .corps-game-img
+{
+	width : 465px;
+	margin-top: 15px;
+
+}
+
+#corps-game #corps-game-block-left
+{
+	padding : 0px 15px 0px 15px;
+	background-color: #414141;
+	height : 100%;
+	width : 465px;
+	display: inline-block;
+	
+}
+
+#corps-game #corps-game-block-right
+{
+	display: inline-block;
+	height : 100%;
+	vertical-align: top;
+	width : 1000px;
+}
+
+
+#corps-game-block-right #game-content 
+{
+	padding: 0px 10px 10px 10px;
+	width : 95%;
+	display: inline-block;
+	text-align: justify;
+	margin-left: 10px;
+	vertical-align: top;
+	font-family: arial;
+	font-size: 15px;
+}
+
+#corps-game-block-right #game-content #game-description
+{
+	display: inline-block;
+	width : 580px;
+}
+
+#content-block-left
+{
+	width : 465px;
+}
+
+#corps-game-block-left h1
+{
+	font-size: 28px;
+	font-family: AvenirFont;
+	color : #ededed;
+}
+
+.fb-block
+{
+	float : right;
+	margin-top: 20px;
+}
+
+.separateur-block
+{
+	width : 100%;
+	height: 1px;
+	background-color: #929292;
+	opacity: 0.4;
+	margin-top: 10px;
+	
+}
