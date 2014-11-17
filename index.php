@@ -14,7 +14,7 @@ require 'models/script-functions.php';
 	});
 	
 		$app->get('/game', function() use ($app) {
-	$app->render('game-page.html');
+	$app->render('game-page.php');
 	});
 	
 $app->run();

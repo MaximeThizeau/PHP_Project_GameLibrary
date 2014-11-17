@@ -69,21 +69,13 @@
     	<div id="corps-game-block-right">
 	    	<div id="menu-game">
 	    		<ul>
-<<<<<<< HEAD
-	    			<li><img src="./assets/img/description-menu.png"><a href="#"> Description </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/actualites-menu.png"><a href="#"> Actualités </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/test-menu.png"><a href="#"> Tests </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/image-menu.png"><a href="#"> Images </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/avis-menu.png"><a href="#"> Avis </a></li><span class="border-menu">|</span>
-	    			<li class="buy-menu"><img src="./assets/img/acheter-menu.png"><a href="#"> Acheter </a></li>
-=======
-	    			<li><img src="./assets/img/description-menu.png"><a href="../views/ContentAjax/description.php"> Description </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/actualites-menu.png"><a href="../views/ContentAjax/actualites.php"> Actualités </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/test-menu.png"><a href="../views/ContentAjax/tests.php"> Tests </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/note-menu.png"><a href="../views/ContentAjax/notes.php"> Notes </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/avis-menu.png"><a href="../views/ContentAjax/avis.php"> Avis </a></li><span class="border-menu">|</span>
-	    			<li class="buy-menu"><img src="./assets/img/acheter-menu.png"><a href="../views/ContentAjax/acheter.php"> Acheter </a></li>
->>>>>>> 43c76790d8d6bdf1951c630042a9e7bc0dc998c3
+	    			<li><img src="./assets/img/description-menu.png"><a href="description.php"> Description </a></li><span class="border-menu">|</span>
+	    			<li><img src="./assets/img/actualites-menu.png"><a href="actualites.php"> Actualités </a></li><span class="border-menu">|</span>
+	    			<li><img src="./assets/img/test-menu.png"><a href="tests.php"> Tests </a></li><span class="border-menu">|</span>
+	    			<li><img src="./assets/img/image-menu.png"><a href="images.php"> Images </a></li><span class="border-menu">|</span>
+	    			<li><img src="./assets/img/avis-menu.png"><a href="avis.php"> Avis </a></li><span class="border-menu">|</span>
+	    			<li class="buy-menu"><img src="./assets/img/acheter-menu.png"><a href="acheter.php"> Acheter </a></li>
+
 	    		</ul>
 	    	</div>
 
