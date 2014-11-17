@@ -675,11 +675,46 @@ body
 	width : 465px;
 }
 
-#corps-game-block-left h1
+
+
+#block-left-block-title h1
 {
 	font-size: 28px;
 	font-family: AvenirFont;
-	color : #ededed;
+	color : #474747;
+	text-align: center;
+	margin-top: 5px;
+}
+
+#block-left-block-title
+{
+	background-color : #eeeeee;
+	margin-top: 15px;
+	height : 200px;
+	width : 453px;
+	padding : 10px;
+	border:1px solid gray;
+	padding:5px;
+	box-shadow:2px 2px 10px gray inset;
+	-moz-box-shadow:2px 2px 10px gray inset;
+	-webkit-box-shadow:2px 2px 10px gray inset;
+}
+
+#block-left-block-title .liste-consoles
+{
+	font-family: AvenirFont;
+	font-size: 18px;
+	text-align: center;
+}
+
+#block-left-block-title .note-block-title
+{
+	font-family: AvenirFont;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+	color: #950a0a;
+	
 }
 
 .fb-block
@@ -697,3 +732,5 @@ body
 	margin-top: 10px;
 	
 }
+
+

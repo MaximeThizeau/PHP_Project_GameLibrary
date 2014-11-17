@@ -1,5 +1,6 @@
 <?php
 require 'vendor/autoload.php';
+require 'models/script-functions.php';
 	$app = new \Slim\Slim();
 	// views initiatilisation
 	$view = $app->view();
