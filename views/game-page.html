@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./assets/js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="./assets/js/search.js"></script>
+	<script type="text/javascript" src="./assets/js/AjaxPageGame.js"></script>
 </head>
 
 
@@ -68,33 +69,36 @@
     	<div id="corps-game-block-right">
 	    	<div id="menu-game">
 	    		<ul>
-	    			<li><img src="./assets/img/description-menu.png"><a href="#"> Description </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/actualites-menu.png"><a href="#"> Actualités </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/test-menu.png"><a href="#"> Tests </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/note-menu.png"><a href="#"> Notes </a></li><span class="border-menu">|</span>
-	    			<li><img src="./assets/img/avis-menu.png"><a href="#"> Avis </a></li><span class="border-menu">|</span>
-	    			<li class="buy-menu"><img src="./assets/img/acheter-menu.png"><a href="#"> Acheter </a></li>
+	    			<li><img src="./assets/img/description-menu.png"><a href="../views/ContentAjax/description.php"> Description </a></li><span class="border-menu">|</span>
+	    			<li><img src="./assets/img/actualites-menu.png"><a href="../views/ContentAjax/actualites.php"> Actualités </a></li><span class="border-menu">|</span>
+	    			<li><img src="./assets/img/test-menu.png"><a href="../views/ContentAjax/tests.php"> Tests </a></li><span class="border-menu">|</span>
+	    			<li><img src="./assets/img/note-menu.png"><a href="../views/ContentAjax/notes.php"> Notes </a></li><span class="border-menu">|</span>
+	    			<li><img src="./assets/img/avis-menu.png"><a href="../views/ContentAjax/avis.php"> Avis </a></li><span class="border-menu">|</span>
+	    			<li class="buy-menu"><img src="./assets/img/acheter-menu.png"><a href="../views/ContentAjax/acheter.php"> Acheter </a></li>
 	    		</ul>
 	    	</div>
-	    	
-	    	<div id="game-content">
-	    		<div id="game-description">
-	    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula nulla, malesuada ut nisl at, aliquam ultrices elit. Sed pretium velit vitae purus cursus, ut commodo ex sollicitudin. Mauris ultrices auctor massa vel ultricies. Pellentesque porttitor condimentum pharetra. Fusce tincidunt dapibus pellentesque. Pellentesque convallis ultricies tincidunt. Suspendisse elementum leo mauris, vel ultrices diam aliquet ac.</p>
 
-<p>Pellentesque vehicula suscipit suscipit. Etiam in venenatis quam, eu sodales nunc. Etiam sollicitudin leo ut faucibus tincidunt. Vestibulum eu sem commodo, posuere erat nec, vulputate sem. Donec vel dignissim velit. Curabitur eleifend erat sed hendrerit auctor. Maecenas sapien justo, imperdiet eget iaculis a, sollicitudin in diam. Donec et ligula laoreet, mattis tellus sed, dignissim sem. Etiam facilisis euismod sem vitae aliquam. Ut risus nisl, dictum viverra pellentesque in, gravida sit amet urna.</p>
-
-<p>Etiam ultrices sed erat ac dignissim. Sed tempus orci nec ligula ultrices facilisis. Ut imperdiet pellentesque nisi sed egestas. Donec consectetur fringilla ante vel tincidunt. Suspendisse tincidunt elit nec justo faucibus ultricies a sit amet mauris. Etiam ut consectetur nunc, sed dignissim mi. Sed quis dolor sapien. Maecenas non pellentesque ipsum. Nam porta velit eros, in elementum erat imperdiet vitae. Nunc venenatis nisl in semper gravida.</p>
-	
-				</div>
-				<div class="fb-block">
-				
-					<div class="fb-like-box" data-href="https://www.facebook.com/assassinscreed.france" data-width="350" data-height="400" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true">
-					</div>
-
-				</div>
-				
-				<div class="clear" style="clear:both"></div>
-	    	</div>
+<div id="contenu">
+<?php
+$d="./views/ContentAjax/";
+	if(isset($_GET['p']))
+		{
+			$p=strtolower($_GET['p']);
+			if(preg_match("/^[a-z0-9\-]+$/",$p) && file_exists($d.$p.".html"))
+				{
+				include $d.$p.".html";
+				}
+			else
+				{
+					include $d."404.html";
+				}
+		}
+	else
+	{
+		include $d."description.php";
+	}
+?>
+</div>
 	    	<div class="separateur-block"></div>
 
 

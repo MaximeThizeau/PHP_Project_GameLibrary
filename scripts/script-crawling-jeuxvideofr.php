@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
 <title>Crawl JeuxVideo.fr</title>
@@ -9,32 +9,58 @@
 
 <?php 
 include('../plugins/simple_html_dom.php');
-$html = file_get_html('http://www.jeuxvideo.fr/jeux/f1-2014/preview-test-f1-2014.html');
+$html = file_get_html('http://www.jeuxvideo.fr/jeux/assassin-s-creed-unity/preview-test-assassin-s-creed-unity.html');
 
-// Le nom du jeux
+//Le nom du jeux//
 $titre = $html->find('title',0);
 $titreJeu = $titre->innertext;
 $titreJeu=substr($titreJeu, 5);
 $titreJeuFinal = explode("(", $titreJeu);
 echo $titreJeuFinal[0].'<br />';
 
-//La note du jeu
+//La note du jeu//
 $note = $html->find('span.note-jeux',0);
 $note1 = $html->find('span.note-jeux',1);
-$noteJeu = $note->innertext;
-$noteJeu1 = $note1->innertext;
-echo "note du site: $noteJeu/10 | note des internautes: $noteJeu1/10 <br>";
+if ($note != '')
+    {
+    $noteJeu = $note->innertext;
+    echo "note du site: $noteJeu/10";
+    }
+if ($note =='')
+    {
+    echo "note du site: 0/10";
+    }
+if ($note1 != '')
+    {
+    $noteJeu1 = $note1->innertext;
+    echo " | note des internautes: $noteJeu1/10 <br />";
+    }
+if ($note1 =='')
+    {
+    echo " | note des internautes: 0/10<br />";
+    }
 
-//Le titre de la description
+
+//Le titre de la description//
 $titreP = $html->find('p.overview',0);
 echo '<strong>'.$titreP.'</strong>';
 
-//La descrition du jeu
+//La descrition du jeu//
+foreach($html->find('div.parsed-text img') as $imgDesc)
+    {
+        $imgDesc->outertext = '';
+            foreach($html->find('a') as $aDesc)
+            {
+                $aDesc->outertext = '';
+            }
+    }
+    echo $imgDesc.'<br />';
+
 $description = $html->find('div.parsed-text',0);
 $descriptionJeu = explode("<br />", $description);
 echo $descriptionJeu[0].'<br />';
 
-//Les differents paragraphes
+//Les differents paragraphes//
 foreach($html->find('div.parsed-text') as $baliseP)
 { 
     foreach($html->find('div.parsed-text img') as $img)
@@ -65,10 +91,19 @@ foreach($html->find('div.parsed-text') as $baliseP)
     {
         $fleche->outertext = '';
     }
+        foreach($html->find('img') as $img)
+    {
+        $img->outertext = '';
+    }
+        foreach($html->find('b') as $b)
+    {
+        $b->outertext = '';
+    }
 
     $paragraphe = str_replace($descriptionJeu[0],'',$baliseP);
     $paragraphe = str_replace('h1', 'h2', $paragraphe);
 
     echo $paragraphe;
 }
+?>
 
