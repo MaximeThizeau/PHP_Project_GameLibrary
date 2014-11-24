@@ -8,7 +8,10 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./assets/js/jquery.autocomplete.min.js"></script>
 	<script type="text/javascript" src="./assets/js/search.js"></script>
-	<script src="http://connect.facebook.net/fr_FR/all.js"></script> 
+	<script src="http://connect.facebook.net/fr_FR/all.js"></script>
+	<script type="text/javascript" src="./assets/js/connexion-btn.js"></script>
+	
+
 </head>
 <?php
 /* include('/include/connexionFB.php'); */
@@ -19,7 +22,35 @@
 <div id="fb-root"></div> <!-- chargé le contenu javascript -->
 	<div id="header">
 		<div id="content_header">
-		 	<div id="connection"> <img src="./assets/img/connection.png"> </div>
+		 	<div id="connection"> 
+		 		<?php
+		 			if(isset($_SESSION['user-pseudo']))
+		 			{
+			 			echo '<span style="color : white; font-family : AvenirFont; margin-right : 30px;">'.$_SESSION['user-pseudo'].'</span>';
+		 			}
+		 		?>
+		 		<img src="./assets/img/connection.png"> 
+		 		<div id="connexion-pop-up">
+		 			<a href="#" id="btn-signout"> <img style="float:right;" src="./assets/img/signout.png"></a>
+		 			<form method="post" id="connection-form">
+		 				<span id="connection-title"> Connexion </span>
+		 				<p><label for="pseudo">Pseudo : </label><input type="text" name="pseudo"></p>
+		 				<p><label for="password">Mot de passe :</label> <input type="password" name="password"></p>
+		 				<p class="btn-center"> <input class="btn-style" type="submit" value="Se connecter"> </p>
+		 			</form>
+		 			<form method="post" id="inscription-form" action="/PHP_Project_GameLibrary/index.php">
+		 				<span id="connection-title"> Inscription </span>
+		 				<p><label for="ins-pseudo">Pseudo : </label><input type="text" name="ins-pseudo"></p>
+		 				<p><label for="ins-password">Mot de passe :</label> <input type="password" name="ins-password"></p>
+		 				<p class="btn-center"> <input class="btn-style" type="submit" value="S'inscrire"> </p>
+		 				
+		 			</form>
+		 			
+		 			<p class="connexion-inscription-menu"> <span id="connexion-btn"> Connexion </span>  <span id="inscription-btn"> Inscription </a> </span>
+		 		</div>
+		 		
+		 		
+		 	</div>
 			<div id="top_barre">
 				<div id="logo"> <img src="./assets/img/gamerz.png"> </div>
 				<div id="space_1"> </div>

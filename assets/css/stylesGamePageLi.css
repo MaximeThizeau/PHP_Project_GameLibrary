@@ -1,0 +1,85 @@
+#AjaxContent
+	{
+		margin: 0 auto;
+	}
+
+#onglets
+	{
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 27px;
+	}
+
+
+#onglets li
+	{
+	position: relative;
+	float: left;
+	list-style: none;
+	margin-right: 5px;
+	cursor: pointer;
+	z-index: 1;
+	display: inline-block;
+	font-family: AvenirFont;
+	font-size: 20px;
+	transition : 1s;
+	}
+
+
+#onglets .actif
+	{
+	border-bottom: none;
+	z-index: 10;
+	}
+
+
+#Ajax
+	{
+	clear: both;
+	position: relative;
+	z-index: 5;
+	margin-top: 12px;
+	background-color: white;
+	color: black;
+	width: 100%;
+	overflow: hidden;
+	height : 735px;
+	}
+
+
+#onglets img
+	{
+	height : 22px;
+	margin-bottom: -2px;
+	}
+
+#onglets .border-menu
+{
+	color: #cecece;
+	opacity: 0.7;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#game-description
+{
+	width: 600px;
+	float: left;
+	text-align: justify;
+	padding: 0px 10px 10px 10px;
+	font-family: arial;
+	font-size: 15px;
+}
+
+#game-content
+{
+	display: inline-block;
+	margin-left: 2%;
+	margin-top: 20px;
+}
+
+#onglets li:hover
+{
+	color : #d83c3c;
+}

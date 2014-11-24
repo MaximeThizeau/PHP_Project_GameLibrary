@@ -1,27 +1,21 @@
-$(document).ready(function(){
-	$("#menu-game a").click(function()
-	{
-		page=$(this).attr("href");
-		$.ajax({
-			url: "./views/ContentAjax/"+page,
-			cache:false,
-			success:function(html){
-				afficher(html);
-			},
-			error:function(XMLHttpRequest,textStatus, errorThrown){
-				afficher("erreur lors du chagement de la page");
+$(function() {
+			$('#onglets').css('display', 'block');
+			$('#onglets').click(function(event) {
+				var actuel = event.target;
+				if (!/li/i.test(actuel.nodeName) || actuel.className.indexOf('actif') > -1) {
+					return;
+				}
+				$(actuel).addClass('actif').siblings().removeClass('actif');
+				setDisplay();
+			});
+			function setDisplay() {
+				var modeAffichage;
+				$('#onglets li').each(function(rang) {
+					modeAffichage = $(this).hasClass('actif') ? '' : 'none';
+					$('.item').eq(rang).css('display', modeAffichage);
+				});
 			}
-		})
-		return false;
-	});
-});
+			setDisplay();
+		});
 
-function afficher(data)
-{
-	$("#contenu").fadeOut(250,function()
-	{
-		$("#contenu").empty();
-		$("#contenu").append(data);
-		$("#contenu").fadeIn(250);
-	})
-}
+	
