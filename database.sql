@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:8889
--- Généré le :  Lun 10 Novembre 2014 à 11:32
+-- Généré le :  Lun 24 Novembre 2014 à 14:05
 -- Version du serveur :  5.5.34
 -- Version de PHP :  5.5.10
 
@@ -50,7 +50,17 @@ CREATE TABLE `Brands` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `Brands`
+--
+
+INSERT INTO `Brands` (`id`, `name`) VALUES
+(1, 'Sony'),
+(2, 'Microsoft'),
+(3, 'Nintendo'),
+(4, 'PC');
 
 -- --------------------------------------------------------
 
@@ -62,7 +72,49 @@ CREATE TABLE `Categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+
+--
+-- Contenu de la table `Categories`
+--
+
+INSERT INTO `Categories` (`id`, `name`) VALUES
+(1, 'Action'),
+(2, 'Adresse'),
+(3, 'Arcade'),
+(4, 'Autres'),
+(5, 'Aventure'),
+(6, 'Beat''em all'),
+(7, 'Casse Briques'),
+(8, 'Coaching'),
+(9, 'Combat'),
+(10, 'Compilation'),
+(11, 'Course'),
+(12, 'Création'),
+(13, 'Drague'),
+(14, 'Flipper'),
+(15, 'FPS'),
+(16, 'Gestion'),
+(17, 'Infiltration'),
+(18, 'Jeu de cartes'),
+(19, 'Jeu de Rôle'),
+(20, 'Jeu de société'),
+(21, 'Ludo-éducatif'),
+(22, 'MMO'),
+(23, 'Party Game'),
+(24, 'Plates-formes'),
+(25, 'Point&Click'),
+(26, 'Puzzle-Game'),
+(27, 'Réflexion'),
+(28, 'Rythme'),
+(29, 'Shoot''em up'),
+(30, 'Simulation'),
+(31, 'Sport'),
+(32, 'Stratégie'),
+(33, 'Survival-Horror'),
+(34, 'Tactique'),
+(35, 'Tir'),
+(36, 'Wargame');
 
 -- --------------------------------------------------------
 
@@ -151,7 +203,22 @@ CREATE TABLE `Plateforms` (
   `name` varchar(255) NOT NULL,
   `brand_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Contenu de la table `Plateforms`
+--
+
+INSERT INTO `Plateforms` (`id`, `name`, `brand_id`) VALUES
+(1, 'Nintendo DS', 3),
+(2, 'Nintendo 3DS', 3),
+(3, 'PlayStation 3', 1),
+(4, 'PlayStation 4', 1),
+(5, 'Xbox 360', 2),
+(6, 'Xbox One', 2),
+(7, 'PC', 4),
+(8, 'Wii', 3),
+(9, 'Wii U', 3);
 
 -- --------------------------------------------------------
 
@@ -161,10 +228,25 @@ CREATE TABLE `Plateforms` (
 
 CREATE TABLE `Reviews` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `mark` int(11) NOT NULL,
+  `note` int(11) NOT NULL,
   `text` text NOT NULL,
   `user_id` int(11) NOT NULL,
   `game_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Review_site`
+--
+
+CREATE TABLE `Review_site` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `note` int(11) NOT NULL,
+  `text` text NOT NULL,
+  `game_id` int(11) NOT NULL,
+  `gamesite_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -9575,12 +9657,20 @@ INSERT INTO `Url` (`id`, `url`, `done`, `crawl_type`, `Gamesite_id`) VALUES
 
 CREATE TABLE `Users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `lastname` varchar(255) NOT NULL,
-  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `firstname` varchar(255) DEFAULT NULL,
   `pseudo` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `Users`
+--
+
+INSERT INTO `Users` (`id`, `lastname`, `firstname`, `pseudo`, `password`) VALUES
+(1, NULL, NULL, 'Test', 'test'),
+(2, NULL, NULL, 'ertop', 'dfghjkl');
 
 -- --------------------------------------------------------
 
@@ -9590,6 +9680,7 @@ CREATE TABLE `Users` (
 
 CREATE TABLE `Votes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `value` int(10) unsigned NOT NULL,
   `game_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
