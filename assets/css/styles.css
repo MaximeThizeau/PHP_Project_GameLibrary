@@ -440,6 +440,7 @@ body
 		display: inline-block;
 		margin-top: 30px;
 		margin-left: -40px;
+    vertical-align : top;
 
 }
 
@@ -482,6 +483,9 @@ body
 		border-radius: 1px;
 		margin-bottom: 30px;
 		margin-top: 15px;
+    max-height : 340px;
+    height : 340px;
+    vertical-align : top;
 
 }
 
@@ -495,6 +499,8 @@ body
 		border-radius: 1px;
 		margin-bottom: 30px;
 		margin-top: 15px;
+    height : 340px;
+    vertical-align : top;
 }
 
 .block_content_game:hover
@@ -525,17 +531,20 @@ body
 
 .block_content_game_img
 {
-		width: 100%;
+		width: 190px;
 		display: inline-block;
 		position: relative;
+    overflow : hidden;
 }
 
 .block_content_game_img .block_bottom_game_img
 {
-	width: 100%;
-	display: inline-block;
-}
+	height : 251px;
+  min-width : 190px;
 
+  margin: auto;
+
+}
 
 
 

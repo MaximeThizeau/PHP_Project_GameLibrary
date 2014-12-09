@@ -130,11 +130,18 @@
 <div id="content_middle">
 		<div class="content_middle_left">
 			<div class="title_content"> Les plus populaires </div>
+			<?php
+			foreach ($this->data['PopularGames'] as $game):
+
+			?>
+
 			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
+				<div class="block_content_game_img">
+					<a href="<?php echo $app->urlFor('Game', array('game_id' => $game['id'])); ?>">
+					<img class="block_bottom_game_img" src="./assets/img/jaquettes/<?php echo Game::getJaquetteName($game['id']); ?>"></a>
 					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
 				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
+				<div class="content_middle_title"> <?php echo utf8_encode($game['name']); ?></div>
 
 				<div class="categories">
 
@@ -142,226 +149,43 @@
 					<a class="categorie_middle" href="#"> Aventure </a>
 				</div>
 			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
 
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
-
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
-
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
-
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
-
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
-
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
-
-		</div>
-
-	<div class="content_middle_right">
-			<div class="title_content"> Dernieres sorties </div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
-
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
-
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
-
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
-
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
-
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
-
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/assasins.png"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
-				</div>
-				<div class="content_middle_title"> Assassin's Creed IV - Black Flag</div>
-				<div class="categories">
-
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
-				</div>
-			</div>
+			<?php
+			endforeach;
+			?>
 
 		</div>
 
 
 
+		<div class="content_middle_right">
+				<div class="title_content"> Dernieres sorties </div>
+
+				<?php
+				foreach ($this->data['LatestGames'] as $game):
+
+					?>
+				<div class="block_content_game">
+					<div class="block_content_game_img"> <a href="#"><img class="block_bottom_game_img" src="./assets/img/jaquettes/<?php echo Game::getJaquetteName($game['id']); ?>"></a>
+						<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
+					</div>
+					<div class="content_middle_title"> <?php echo utf8_encode($game['name']); ?></div>
+					<div class="categories">
+
+						<a class="categorie_middle" href="#"> Action </a>
+						<a class="categorie_middle" href="#"> Aventure </a>
+					</div>
+				</div>
+				<?php
+			endforeach;
+			?>
+			</div>
 
 
 
-		<!--
-<div class="content_middle_right">
-			<div class="title_content"> Les plus populaires </div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <img src="./assets/img/assasins.png">
-					<div class="block_content_game_img_icon"> </div>
-				</div>
-			<div class="content_middle_title"> Assassin's creed </div>
-			<div class="categories">
-				<div class="content_categories"> Aventure </div>
-				<div class="content_categories"> Action </div>
-			</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <img src="./assets/img/assasins.png">
-					<div class="block_content_game_img_icon"> </div>
-				</div>
-			<div class="content_middle_title"> Assassin's creed </div>
-			<div class="categories">
-				<div class="content_categories"> Aventure </div>
-				<div class="content_categories"> Action </div>
-			</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <img src="./assets/img/assasins.png">
-					<div class="block_content_game_img_icon"> </div>
-				</div>
-			<div class="content_middle_title"> Assassin's creed </div>
-			<div class="categories">
-				<div class="content_categories"> Aventure </div>
-				<div class="content_categories"> Action </div>
-			</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <img src="./assets/img/assasins.png">
-					<div class="block_content_game_img_icon"> </div>
-				</div>
-			<div class="content_middle_title"> Assassin's creed </div>
-			<div class="categories">
-				<div class="content_categories"> Aventure </div>
-				<div class="content_categories"> Action </div>
-			</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <img src="./assets/img/assasins.png">
-					<div class="block_content_game_img_icon"> </div>
-				</div>
-			<div class="content_middle_title"> Assassin's creed </div>
-			<div class="categories">
-				<div class="content_categories"> Aventure </div>
-				<div class="content_categories"> Action </div>
-			</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <img src="./assets/img/assasins.png">
-					<div class="block_content_game_img_icon"> </div>
-				</div>
-			<div class="content_middle_title"> Assassin's creed </div>
-			<div class="categories">
-				<div class="content_categories"> Aventure </div>
-				<div class="content_categories"> Action </div>
-			</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <img src="./assets/img/assasins.png">
-					<div class="block_content_game_img_icon"> </div>
-				</div>
-			<div class="content_middle_title"> Assassin's creed </div>
-			<div class="categories">
-				<div class="content_categories"> Aventure </div>
-				<div class="content_categories"> Action </div>
-			</div>
-			</div>
-			<div class="block_content_game">
-				<div class="block_content_game_img"> <img src="./assets/img/assasins.png">
-					<div class="block_content_game_img_icon"> </div>
-				</div>
-			<div class="content_middle_title"> Assassin's creed </div>
-			<div class="categories">
-				<div class="content_categories"> Aventure </div>
-				<div class="content_categories"> Action </div>
-			</div>
-			</div>
-		</div>
--->
+
+
+
+
 	</div>
 </body>
