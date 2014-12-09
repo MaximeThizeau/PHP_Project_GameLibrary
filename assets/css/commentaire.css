@@ -1,0 +1,397 @@
+/*#imagesAvis
+{
+		margin-top: 40px;
+		width: 1000px;
+		height:600px;
+}
+
+#imagesAvis img
+{
+	position: absolute;
+}
+
+#addCommentContainer
+{
+	position: absolute;
+	width: 200px;
+	height: 500px;
+	right: 0;
+	margin-right:38px;
+	margin-top: 100px;
+
+}
+
+#body
+{
+	width: 200px;
+	height: 250px;
+	border:1px solid #aaa;
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	-moz-box-shadow:0 0 5px #aaa;
+	-webkit-box-shadow:0 0 5px #aaa;
+	box-shadow:0 0 5px #aaa;
+	font-size: 12px;
+}
+
+#name
+{
+	width: 200px;
+	border:1px solid #aaa;
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	-moz-box-shadow:0 0 5px #aaa;
+	-webkit-box-shadow:0 0 5px #aaa;
+	box-shadow:0 0 5px #aaa;
+}
+
+#submit {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 18px;
+	background: #565f66;
+	padding: 10px 63px 10px 63px;
+	margin-top: -2px;
+	text-decoration: none;
+}
+
+#submit:hover {
+	background: #163142;
+	text-decoration: none;
+}
+
+
+#commentContent
+{
+	width:575px;
+	height:450px;
+	position: absolute;
+	z-index:999;
+	margin-top: 75px;
+	margin-left: 80px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+.comment
+{
+	display : inline-block;
+	height: 130px;
+	width: 530px;
+	margin-left:10px;
+	margin-top: 3px;
+	background-color: #f3f3f3;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow:0 0 5px #aaa;
+	-webkit-box-shadow:0 0 5px #aaa;
+	box-shadow:0 0 5px #aaa;
+}
+
+.name
+{
+	display: inline-block;
+	width: 440px;
+	height: 20px;
+	position: absolute;
+	margin-left: 85px;
+	margin-top: 5px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow:0 0 2px #aaa;
+	-webkit-box-shadow:0 0 2px #aaa;
+	box-shadow:0 0 2px #aaa;
+	background-color:white;
+}
+
+.comment p
+{
+	width: 440px;
+	height: 92px;
+	display: inline-block;
+	position: absolute;
+	margin-top: 32px;
+	margin-left: 85px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow:0 0 2px #aaa;
+	-webkit-box-shadow:0 0 2px #aaa;
+	box-shadow:0 0 2px #aaa;
+	background-color: white;
+}
+
+.comment img
+{
+	width : 85px;
+	z-index:980;
+	position:absolute;
+	margin-top: 2px;
+}
+*/
+
+#contentAvis
+{
+	width:100%;
+	height:100%;
+}
+
+#imagesAvis
+{
+margin-top: 40px;
+width: 1000px;
+height:600px;
+}
+
+#imagesAvis img
+{
+position: absolute;
+}
+
+#addCommentContainer
+{
+position: absolute;
+width: 200px;
+height: 500px;
+right: 0;
+margin-right:38px;
+margin-top: 100px;
+}
+
+#commentContent
+{
+width:720px;
+height:450px;
+position: absolute;
+z-index:999;
+margin-top: 75px;
+margin-left: 136px;
+overflow-y:scroll;
+overflow-x:hidden;
+}
+
+.comment
+{
+height: 130px;
+width: 100%;
+margin-left:10px;
+margin-top: 3px;
+background-color: #f3f3f3;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-moz-box-shadow:0 0 5px #aaa;
+-webkit-box-shadow:0 0 5px #aaa;
+box-shadow:0 0 5px #aaa;
+}
+
+.name
+{
+display: inline-block;
+width: 86%;
+height: 20px;
+position: absolute;
+margin-left: 85px;
+margin-top: 5px;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+-moz-box-shadow:0 0 2px #aaa;
+-webkit-box-shadow:0 0 2px #aaa;
+box-shadow:0 0 2px #aaa;
+background-color:white;
+}
+
+.comment p
+{
+width: 86%;
+height: 92px;
+display: inline-block;
+position: absolute;
+margin-top: 32px;
+margin-left: 85px;
+overflow:hidden;
+overflow-y:scroll;
+overflow-x:hidden;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+-moz-box-shadow:0 0 2px #aaa;
+-webkit-box-shadow:0 0 2px #aaa;
+box-shadow:0 0 2px #aaa;
+background-color: white;
+}
+
+.comment img
+{
+width : 85px;
+z-index:980;
+position:absolute;
+margin-top: 2px;
+}
+
+#unhide
+{
+-webkit-border-radius: 40;
+-moz-border-radius: 40;
+border-radius: 40px;
+font-family: Arial;
+color: #ffffff;
+font-size: 40px;
+background: #9db4c4;
+padding-right:10px;
+padding-left:10px;
+text-decoration: none;
+position: absolute;
+right:0;
+margin-top:270px;
+margin-right:72px;
+}
+
+#unhide:hover {
+background: #476c82;
+text-decoration: none;
+cursor: pointer;
+}
+
+#hide
+{
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	border-radius: 35px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 35px;
+	background: #476c82;
+	padding-right:12px;
+	padding-left:12px;
+	text-decoration: none;
+	position: absolute;
+	bottom:0;
+	margin-left:20px;
+	z-index:2018;
+	margin-bottom:40px;
+}
+
+#hide:hover {
+	background: #9db4c4;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#test
+{
+position:absolute;
+z-index:2000;
+margin-left:-90px;
+margin-top:-80px;
+display:none;
+}
+
+#addCommentContainer
+{
+position: absolute;
+width: 200px;
+height: 500px;
+right: 0;
+z-index:2004;
+display:none;
+}
+
+#body
+{
+width: 200px;
+height: 285px;
+border:1px solid #aaa;
+border-radius:2px;
+-moz-border-radius:2px;
+-webkit-border-radius:2px;
+-moz-box-shadow:0 0 5px #aaa;
+-webkit-box-shadow:0 0 5px #aaa;
+box-shadow:0 0 5px #aaa;
+font-size: 12px;
+position:absolute;
+z-index:2007;
+margin-top:35px;
+margin-left:-65px;
+}
+
+#name
+{
+width: 200px;
+height:25px;
+border:1px solid #aaa;
+border-radius:2px;
+-moz-border-radius:2px;
+-webkit-border-radius:2px;
+-moz-box-shadow:0 0 5px #aaa;
+-webkit-box-shadow:0 0 5px #aaa;
+box-shadow:0 0 5px #aaa;
+position:absolute;
+z-index:2009;
+top:0;
+margin-top:15px;
+margin-left:-65px;
+}
+
+#submit {
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+font-family: Arial;
+color: #ffffff;
+font-size: 18px;
+background: #565f66;
+padding: 10px 63px 10px 63px;
+margin-top: -2px;
+text-decoration: none;
+position:absolute;
+z-index:2010;
+bottom:0;
+margin-left:-65px;
+margin-bottom:105px;
+}
+
+#submit:hover {
+background: #163142;
+text-decoration: none;
+}
+
+#lol1
+{
+	display:none;
+}
+
+#contentavis1
+{
+	display:none;
+}
+
+#comment1
+{
+	display:none;
+}
+
+#avatar1
+{
+	display:none;
+}
+
+#name1
+{
+	display:none;
+}
+
+p .1
+{
+	display:none;
+}

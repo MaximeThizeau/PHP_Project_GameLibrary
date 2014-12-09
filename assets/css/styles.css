@@ -1106,3 +1106,58 @@ body
 {
 	display: none;
 }
+
+#buttonGrow
+{
+  width:80px;
+  height:80px;
+  position:absolute;
+  z-index:9999;
+  top: 400px;
+  margin-left:-35px;
+  border: none;
+  opacity:0.2;
+}
+
+#buttonGrow:hover
+{
+  opacity:1;
+}
+
+#buttonShrink
+{
+  width:80px;
+  height:80px;
+  display:none;
+  position:absolute;
+  z-index:9999;
+  top: 400px;
+  border: none;
+  float:right;
+  opacity:0.2;
+}
+
+#buttonShrink:hover
+{
+  opacity:1;
+}
+
+#h1
+{
+  font-size: 28px;
+  font-family: AvenirFont;
+  color : white;
+  position:absolute;
+  top:430px;
+  margin-left:-195px;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(270deg);
+  display:none;
+  z-index:9856;
+}
+
+#game-content-image
+{
+  margin-top: 30px;
+}

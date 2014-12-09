@@ -74,6 +74,18 @@
 
 #game-content
 {
+	width:800px;
+}
+
+#game-content-FB
+{
+	display: inline-block;
+	margin-left: 2%;
+	margin-top: 20px;
+}
+
+#game-content-test
+{
 	display: inline-block;
 	margin-left: 2%;
 	margin-top: 20px;

@@ -1,25 +1,25 @@
 
-<div id="game-content">
+<div id="game-content-test">
 
 
 
 			<div id="test-selected">
 				<div id="test-selected-left">
 						<div class="header-test-selected">
-							<img src="./assets/img/jeuxvideocomlogo.png" alt="Logo jeuxvideo.com">
+							<img src="../assets/img/jeuxvideocomlogo.png" alt="Logo jeuxvideo.com">
 							<h1 class="h1-header-test-selected">Assassin's Creed IV : Black Flag</h1>
 						</div>
 
 						<div id="content-test-selected">
 							<p class="chapo">Quasiment un an jour pour jour après la sortie d'Assassin's Creed 3, il est l'heure de retrouver la famille Kenway à travers un nouvel épisode mettant en scène le grand-père de Connor, j'ai nommé Edward le pirate. Ce changement de héros est évidemment accompagné par l'arrivée d'un univers à la fois complètement inédit et passionnant : les Caraïbes du XVIIIème siècle. Espérons simplement qu'il ne s'agisse pas là de la seule nouveauté de cet opus... </p>
 					 			<div class="img-block-test floatright">
-									<img class="imgleft" src="./assets/img/Edward.jpg" >
+									<img class="imgleft" src="../assets/img/Edward.jpg" >
 									<q> Edward est un héros charismatique. </q>
 								</div>
 							<p> Pour la première fois dans l'histoire de la série (du moins pour les épisodes principaux), Assassin's Creed 4 : Black Flag ne débute pas dans le présent, mais directement dans le passé. Cela montre clairement un désintéressement des développeurs pour les événements actuels, voire même, et c'est plus problématique, un manque d'idées. En effet, on incarne un personnage dont on ne sait rien et qui se contente d'entrer dans l'animus afin d'obtenir pour Abstergo des images susceptibles d'être utilisées dans le cadre d'un film sur les pirates. Oubliez donc toute forme de cohérence, ou ne serait-ce que des implications concrètes de la fin du 3ème opus (elle est à peine évoquée), on ne nous apprend ici qu'une chose : les Templiers ne sont pas gentils. En effet, les 3 séquences de 5 à 10 minutes obligatoires dans le présent ne se résument qu'à quelques conversations avec une voix mystérieuse qui nous met en garde contre les agissements d'Abstergo. Il est possible de pirater les animus des autres participants au projet en effectuant divers mini-jeux, mais ne vous attendez pas à débloquer des informations plus précises que la biographie de Robert De Sablé ou quelques mémos vocaux de Desmond Miles. Bref, on n'apprend rien, ce qui est déjà en soi problématique, mais le principal souci vient surtout de l'absence totale d'intérêt de ces séquences, que ce soit en termes de gameplay ou de scénario. Il serait peut-être temps de changer l'orientation de la série à ce niveau...</p>
 							<h2>Un scénario décevant</h2>
 							<div class="img-block-test floatleft">
-								<img class="imgleft" src="./assets/img/balaine.jpg" >
+								<img class="imgleft" src="../assets/img/balaine.jpg" >
 								<q> Edward est un héros charismatique. </q>
 							</div>
 							<p> Vous l'aurez donc compris, l'intrigue se situe davantage dans le passé que dans le présent. Comme prévu, on y suit le grand-père du héros d'AC3 : Edward Kenway, un jeune homme ayant abandonné sa femme afin de partir dans les Caraïbes en quête de richesse et d'aventures. Il ne s'agit là que de ses seules préoccupations, ce qui le conduira à travailler pour lui et uniquement pour lui, en ne se souciant que de loin des intérêts des Templiers et des assassins. En effet, s'il porte un costume d'assassin, c'est simplement qu'il l'a dérobé sur le corps encore chaud d'une de ses victimes en tout début d'aventure. On nous présente donc un héros plutôt badass, mais qui n'en reste pas moins très charismatique et intéressant. Son histoire n'est malheureusement pas au niveau puisqu'on nous y conte simplement une quête d'humanité et de rédemption pas désagréable à suivre, mais sans grand relief ni surprise. Encore une fois, on n'apprend rien sur l'univers de la série, ni même sur Edward lui-même, puisque tout ce qu'on nous dévoile est présent sur le Net depuis de longs mois déjà. Soyons donc clairs : si vous prévoyez de jouer à Assassin's Creed 4 pour son scénario, vous pouvez passer votre chemin.</p>
@@ -62,7 +62,7 @@
 <div id="block-tests">
 		<div class="test-mini-block">
 			<div class="header-test-mini-block">
-				<img src="./assets/img/jeuxvideocomlogo.png" alt="Logo jeuxvideo.com">
+				<img src="../assets/img/jeuxvideocomlogo.png" alt="Logo jeuxvideo.com">
 				<div class="note-test-mini-block"><span class="noteactu">17</span><span class="notemax"> / 20</span></div>
 			</div>
 
@@ -78,7 +78,7 @@
 
 		<div class="test-mini-block">
 			<div class="header-test-mini-block">
-				<img src="./assets/img/logojeuxvideofr.png" alt="Logo jeuxvideo.fr">
+				<img src="../assets/img/logojeuxvideofr.png" alt="Logo jeuxvideo.fr">
 				<div class="note-test-mini-block"><span class="noteactu">12</span><span class="notemax"> / 20</span></div>
 			</div>
 
@@ -94,7 +94,7 @@
 
 		<div class="test-mini-block">
 			<div class="header-test-mini-block">
-				<img src="./assets/img/gamebloglogo.png" alt="Logo Gameblog">
+				<img src="../assets/img/gamebloglogo.png" alt="Logo Gameblog">
 				<div class="note-test-mini-block"><span class="noteactu">15</span><span class="notemax"> / 20</span></div>
 			</div>
 

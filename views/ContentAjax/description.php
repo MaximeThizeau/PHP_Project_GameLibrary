@@ -7,7 +7,7 @@
 				<p>Etiam ultrices sed erat ac dignissim. Sed tempus orci nec ligula ultrices facilisis. Ut imperdiet pellentesque nisi sed egestas. Donec consectetur fringilla ante vel tincidunt. Suspendisse tincidunt elit nec justo faucibus ultricies a sit amet mauris. Etiam ut consectetur nunc, sed dignissim mi. Sed quis dolor sapien. Maecenas non pellentesque ipsum. Nam porta velit eros, in elementum erat imperdiet vitae. Nunc venenatis nisl in semper gravida.
 				</p>
 			</div>
-			<div id="game-content">
+			<div id="game-content-FB">
 				<div class="fb-like-box" data-href="https://www.facebook.com/assassinscreed.france" data-width="350" data-height="400" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true">
 				</div>
 			</div>

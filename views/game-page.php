@@ -9,9 +9,10 @@
   <script type="text/javascript" src=" ../assets/js/AjaxPageGame.js"></script>
   <link rel="stylesheet" media="screen" type="text/css" href="../assets/css/stylesGamePageLi.css">
   <link rel="stylesheet" media="screen" type="text/css" href="../assets/css/jquery.bxslider.css">
-  <script type="text/javascript" src="../assets/js/jssor/jssor.js"></script>
-  <script type="text/javascript" src="../assets/js/jssor/jssor.slider.js"></script>
-  <script type="text/javascript" src="../assets/js/jssor_param.js"></script>
+  <link rel="stylesheet" media="screen" type="text/css" href="../assets/css/commentaire.css">
+  <script type="text/javascript" src="../assets/js/scriptAvis.js"></script>
+  <script type="text/javascript" src="../assets/js/resise.js"></script>
+  <link rel="stylesheet" href="../assets/css/slider.css">
 </head>
 
 
@@ -59,7 +60,10 @@
 
   <div id="corps-game">
     <div id="corps-game-block-left">
+      <h1 id="h1"> Assassin's Creed IV - Black Flag </h1>
       <img src=" ../assets/img/jaquettes/<?php echo $this->data['jaquette'] ;?>" class="corps-game-img">
+      <input type="image" value="agrandir"  id="buttonGrow" src="../assets/img/shrink.png"/>
+      <input type="image" value="retrecir" id="buttonShrink" src="../assets/img/grow.png" />
       <div id="content-block-left">
         <div id="block-left-block-title">
 
@@ -82,6 +86,18 @@
 
 
 </div>
+<script type="text/javascript" src="../assets/js/scripts/WallopSlider.js"></script>
+<script type="text/javascript" src="../assets/js/scripts/script.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+ga('create', 'UA-45410808-1', 'pedroduarte.me');
+ga('send', 'pageview');
+
+</script>
 
 </body>
