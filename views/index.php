@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="./assets/js/search.js"></script>
 	<script src="http://connect.facebook.net/fr_FR/all.js"></script>
 	<script type="text/javascript" src="./assets/js/connexion-btn.js"></script>
+	<script type="text/javascript" src="./assets/js/resise.js"></script>
 
 
 </head>
@@ -54,7 +55,8 @@
 				<div id="logo"> <img src="./assets/img/gamerz.png"> </div>
 				<div id="space_1"> </div>
 				<div id="search_">
-					<form class="form-wrapper" method="post">
+
+					<form class="form-wrapper" method="post" action="<?php echo $app->urlFor('Game', array('game_id' => 20)); ?>">
 					<div class="btn-left-loupe"></div>
 					<input class="search_data" name="saisie" type="text" id="search" placeholder="Mots-Clefs..." />
 					<button type="submit">Search</button>
@@ -78,25 +80,43 @@
 	    </div>
     </div>
 
-
     <div id="content_top_game">
 		<div id="block_left">
     		<div id="content_top_block_left">
-	    		<img class="game_img" src="./assets/img/assasins.png">
+					<img src=" ./assets/img/jaquettes/<?php echo Game::getJaquetteName($this->data['BigGame']['id']) ;?>" class="game_img">
 	    		<div id="logo_block_left">
-	    		<img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
+						<?php
+
+						foreach(Game::getBrandFromGameWithId($this->data['BigGame']['id']) as $theBrand)
+						{
+							if(file_exists('./assets/img/'.strtolower($theBrand).'.png'))
+							echo '<img src="./assets/img/'.strtolower($theBrand).'.png">';
+						}
+						?>
+					</div>
 	    	</div>
-	    	<div id="games_name">Assassin's Creed IV   Black Flag</div>
+	    	<div id="games_name"><?php echo $this->data['BigGame']['name']; ?></div>
 	    </div>
 	    <div id="block_middle">
-	    	<div id="content_top_block_middle"> Assassin's Creed IV  <span class="sous_titre"> Black Flag </span></div>
+	    	<div id="content_top_block_middle"> <?php echo $this->data['BigGame']['name']; ?></div>
 
-<div id="content_middle_block_middle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu ipsum est. Maecenas ex magna, feugiat nec lacinia nec, malesuada egestas augue. Etiam ornare turpis nisl, et consectetur lacus commodo et. Nam volutpat sem libero, nec tincidunt augue dapibus at. Nullam congue a nunc elementum convallis. Nunc a tortor sit amet libero scelerisque eleifend. Fusce quis consectetur metus, posuere faucibus libero. Integer ornare nulla eget viverra gravida. Donec pretium facilisis vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras purus dui, rutrum non sem sed, efficitur mattis purus. Donec quis volutpat libero, ac scelerisque ipsum. Morbi in mi hendrerit, fermentum arcu vel, vulputate nibh. Donec mi urna, luctus non convallis sit amet, tempus eu elit.</p>
+		<div id="content_middle_block_middle">
+			<?php echo utf8_encode(Game::getGameDescription($this->data['BigGame']['id'])) ?>
+		</div>
+		<div id="content_bottom_block_middle"><a href="#" class="learnmore"> Learn More </a>
+			<?php
+			if(count(Game::getGameCategory($this->data['BigGame']['id'])) > 0 )
+			{
 
-<p>Curabitur purus lacus, ullamcorper vel faucibus id, cursus et dolor. Nunc rutrum metus nec viverra semper. Etiam sed semper nisi, malesuada aliquet magna. Morbi tincidunt, metus dictum vestibulum tincidunt, ligula mi lobortis libero, eu efficitur arcu magna at nisl. Fusce risus lorem, eleifend ut neque vel, feugiat tristique lacus. Nullam luctus eros id porttitor pretium. Aliquam fermentum, nulla et aliquam mollis, odio sem efficitur lorem, a rutrum dolor augue a sapien. Pellentesque et finibus elit.</p>
+				foreach(Game::getGameCategory($this->data['BigGame']['id']) as $theGame)
+				{
+					echo '<a href="#" class="category">'.utf8_encode($theGame).'</a>';
 
-<p>In hac habitasse platea dictumst. Ut auctor ex erat, placerat eleifend diam dictum rutrum. Maecenas id tincidunt nulla. Nunc ac rhoncus nibh. Ut in justo nisl. In eu risus rhoncus, mattis augue ut, dignissim mauris. Suspendisse potenti. Aliquam vel tincidunt augue. Proin eget purus nec dui iaculis commodo. Donec interdum pharetra mauris, ac vehicula arcu bibendum a. Vestibulum ac viverra felis, eu fermentum leo. Sed rutrum ligula vel mauris porttitor, at volutpat sem facilisis.</p> </div>
-	    	<div id="content_bottom_block_middle"><a href="#" class="learnmore"> Learn More </a> <a href="#" class="category">Action</a><a href="#" class="category">Aventure</a></div>
+				}
+			}
+			?>
+
+		</div>
 
 	    </div>
 
@@ -139,14 +159,34 @@
 				<div class="block_content_game_img">
 					<a href="<?php echo $app->urlFor('Game', array('game_id' => $game['id'])); ?>">
 					<img class="block_bottom_game_img" src="./assets/img/jaquettes/<?php echo Game::getJaquetteName($game['id']); ?>"></a>
-					<div class="logo_block_bottom"><img src="./assets/img/nintendo.png"><img src="./assets/img/windows.png"><img src="./assets/img/ps.png"><img src="./assets/img/xbox.png"></div>
+					<div class="logo_block_bottom">
+						<?php
+						foreach(Game::getBrandFromGameWithId($game['id']) as $Brand)
+						{
+
+							if(file_exists('./assets/img/'.strtolower($Brand).'.png'))
+							echo '<img src="./assets/img/'.strtolower($Brand).'.png">';
+							else
+							echo 'fkjhgfjdks';
+						}
+						?>
+					</div>
 				</div>
 				<div class="content_middle_title"> <?php echo utf8_encode($game['name']); ?></div>
 
 				<div class="categories">
 
-					<a class="categorie_middle" href="#"> Action </a>
-					<a class="categorie_middle" href="#"> Aventure </a>
+					<?php
+					if(count(Game::getGameCategory($game['id'])) > 0 )
+					{
+
+						foreach(Game::getGameCategory($game['id']) as $theGame)
+						{
+							echo '<a href="#" class="categorie_middle">'.utf8_encode($theGame).'</a>';
+
+						}
+					}
+					?>
 				</div>
 			</div>
 
@@ -172,8 +212,17 @@
 					<div class="content_middle_title"> <?php echo utf8_encode($game['name']); ?></div>
 					<div class="categories">
 
-						<a class="categorie_middle" href="#"> Action </a>
-						<a class="categorie_middle" href="#"> Aventure </a>
+						<?php
+						if(count(Game::getGameCategory($game['id'])) > 0 )
+						{
+
+							foreach(Game::getGameCategory($game['id']) as $theGame)
+							{
+								echo '<a href="#" class="categorie_middle">'.utf8_encode($theGame).'</a>';
+
+							}
+						}
+						?>
 					</div>
 				</div>
 				<?php

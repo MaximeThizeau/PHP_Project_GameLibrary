@@ -53,6 +53,7 @@ while($donnees = $query->fetch())
     {
       $href = "http://www.jeuxvideo.com". $href;
       echo "Type 4 :". $href."<br>";
+      
 
     }
 

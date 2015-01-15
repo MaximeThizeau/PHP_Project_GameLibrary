@@ -97,13 +97,23 @@ $(document).ready(function(){
 
 
 
-  /*$("#llll").click(function(){
-    $("#gg").animate({ fontSize:"10px"}, 1000);
-    $("#div1").animate({ width: '30%', height:'100px'}, 1000);
-    $("#div2").animate({ width: '69%', height:'100px'}, 1000);
-    $("#ll").show();
-    $("#llll").hide();
-  });*/
+    $("#corps-game .corps-game-img").ready(function(){
+      if ($('#corps-game .corps-game-img').height() >= 520) {
+        $('#corps-game .corps-game-img').animate({height:'520px'}, 0);;
+      }
+      else{
+      }
+    });
+
+
+    $(".game_img").ready(function(){
+      if ($('.game_img').height() >= 290) {
+        $('.game_img').animate({height:'290px'}, 0);;
+      }
+      else{
+      }
+    });
+
 
 
 });

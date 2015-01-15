@@ -33,24 +33,24 @@ function isQuoteBalise($html, $testValue)
 
   <?php
 
-  foreach($html->find('td#nom_jeu h1 b') as $e) //Trouve tous les <b> dans les <td id="nom_jeu">
+  foreach($html->find('article .titre-alltype-article') as $e) //Trouve tous les <b> dans les <td id="nom_jeu">
   $titreJeu = $e->innertext; //Titre du jeu
 
-  $consoles = Array();                                              // Consoles possibles
-  $altValue = $html->find('td#nom_mc img', 0)->getAttribute('alt');
-  for($i = 0; $i < count($html->find('li a img')); $i++)
-  {
-
-    $altValue = $html->find('li a img', $i)->getAttribute('alt');
-    if (preg_match("/".$titreJeu." - [a-zA-Z0-9_]+/", $altValue))
-    {
-      $consoles[] = $altValue;
-    }
-  }
+  // $consoles = Array();                                              // Consoles possibles
+  // $altValue = $html->find('td#nom_mc img', 0)->getAttribute('alt');
+  // for($i = 0; $i < count($html->find('li a img')); $i++)
+  // {
+  //
+  //   $altValue = $html->find('li a img', $i)->getAttribute('alt');
+  //   if (preg_match("/".$titreJeu." - [a-zA-Z0-9_]+/", $altValue))
+  //   {
+  //     $consoles[] = $altValue;
+  //   }
+  // }
 
 
   //Petite description du jeu, debut du test
-  $chapo = $html->find('p#chapo', 0);
+  $chapo = $html->find('.intro-article', 0);
   $chapo =  $chapo->innertext;
 
   //Article
@@ -109,17 +109,18 @@ function isQuoteBalise($html, $testValue)
       }
     }
   }
-  $div_img = $html->find('#test_txt .test_encart');
+  $div_img = $html->find('.encart-article');
 
   $position_leftright = 1;
   foreach($div_img as $div)
   {
-      $quote = $div->find('q', 0);
+      $quote = $div->find('figcaption', 0);
       $img = $div->find('img', 0);
 
         $errormsg = "MSGZ98A7Z6";
         $alt = $img->getAttribute('alt');
         $src = $img->getAttribute('src');
+        $src = "http:".$src;
         $query = $bdd->prepare('INSERT INTO Pictures_test (alt) VALUES(:alt)');
         $query->bindValue(':alt', $alt, PDO::PARAM_STR);
         $query->execute();
@@ -155,38 +156,38 @@ function isQuoteBalise($html, $testValue)
 
 
 
-  $note = $xp->query('//ul/li/div[@itemprop="rating"]/strong');
+  $note = $html->find(".note strong", 0);
 
-  foreach($note as $n)
-  {
-    $notejvc = $n->nodeValue;
-  }
+  $notejvc = $note->plaintext;
 
 
 
-  $avis_auteur = $html->find("#avis_auteur", 0);
 
-  $avis_de = $avis_auteur->find(".avis_infos .auteur strong", 0);
+  $avis_auteur = $html->find(".bloc-avis-testeur", 0);
+
+  $avis_de = $avis_auteur->find(".auteur span", 0);
   $avis_de = $avis_de->plaintext;
 
   $statut = $avis_auteur->find(".statut", 0);
   $statut = $statut->plaintext;
 
-  $resume = $avis_auteur->find(".resume", 0);
+  $resume = $html->find(".bloc-critique .resume-critique ", 0);
   $resume = $resume->plaintext;
 
   $positive_ul = '<ul class="positive">';
   $negative_ul = '<ul class="negative">';
 
-  $positive_script = $avis_auteur->find("#moins ul li");
-  foreach($positive_script as $e)
+  $positive_script = $html->find(".col-md-6", 0);
+  $positive_comments = $positive_script->find(".liste-argument li");
+  foreach($positive_comments as $e)
   {
     $positive_ul .= "<li><span class='li-position'>".$e->innertext."</span></li>";
   }
   $positive_ul .= '</ul>';
 
-  $negative_script = $avis_auteur->find("#plus ul li");
-  foreach($negative_script as $e)
+  $negative_script = $html->find(".col-md-6", 1);
+  $negative_comments = $negative_script->find(".liste-argument li");
+  foreach($negative_comments as $e)
   {
     $negative_ul .= "<li><span class='li-position'>".$e->innertext."</span></li>";
   }

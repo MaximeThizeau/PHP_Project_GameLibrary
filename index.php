@@ -8,6 +8,11 @@ require 'models/Game.php';
 
 
 
+
+
+
+
+
 	$app = new \Slim\Slim();
 	// views initiatilisation
 
@@ -21,11 +26,13 @@ require 'models/Game.php';
 
 
 	$app->get('/', function() use ($app) {
-	$popGames =	Game::getGamesByPopularityWithLimit(30);
-	$latestGames =	Game::getGamesByDateWithLimit(30);
+	$bigGame =	Game::getGameWithMostViews();
+	$popGames =	Game::getGamesWithJaquetteWithLimit(30);
+	$latestGames =	Game::getGamesWithJaquetteWithLimit(30);
 	$app->render(
 	'index.php',
 	array(
+		"BigGame" => $bigGame,
 		"PopularGames" => $popGames,
 		"LatestGames" => $latestGames
 	)
@@ -35,6 +42,7 @@ require 'models/Game.php';
 	$app->get('/game/:game_id', function ($game_id) use ($app) {
 		$game = Game::getGame($game_id);
 		$jaquette = Game::getJaquetteName($game_id);
+		Game::incrementViews($game_id);
 		$app->render(
 		'game-page.php',
 		array(
@@ -47,6 +55,17 @@ require 'models/Game.php';
 	$app->post('/inscription', function() {
     $app->render('index.php');
 	});
+
+
+	 $app->get('/testParse', function () use ($app) {
+
+	 	$app->render('../testParse.php');
+	 });
+
+	$app->post('/testParse', function () use ($app) {
+
+		$app->render('../testParse.php');
+	})->name('testParse');
 
 $app->run();
 ?>

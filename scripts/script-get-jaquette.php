@@ -13,6 +13,12 @@ function enregistrerImage($paramId, $titreDuJeu, $src, $bdd)
   $lastid = $bdd->lastinsertid();
   $nom_photo = $titreDuJeu ."_".$lastid;
 
+  $queryUpdateGame = $bdd->prepare("UPDATE Games SET jaquette_id = :jaquette_id WHERE id =:game_id");
+  $queryUpdateGame->bindValue(":jaquette_id", $lastid);
+  $queryUpdateGame->bindValue(":game_id", $paramId);
+  $queryUpdateGame->execute();
+
+
   $upload = file_put_contents("../assets/img/jaquettes/".$nom_photo.".jpg",file_get_contents($src));
 }
 

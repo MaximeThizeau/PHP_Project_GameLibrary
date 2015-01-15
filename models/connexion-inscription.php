@@ -3,7 +3,7 @@
 
 	try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=php_project', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=php_project', 'root', 'root');
 }
 catch(Exception $e)
 {

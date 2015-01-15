@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -69,16 +70,31 @@
 
           <h1> <?php echo $this->data['game']['name']; ?> </h1>
           <p class="liste-consoles"><strong>Consoles :</strong> PC, PS4, PS3, Xbox One, Xbox 360, Wii, Wii U, Nintendo 3DS</p> <br>
-          <?php echo $this->data['jaquette'] ;?>
+
           <p class="note-block-title"> Note : 18/20</p>
         </div>
       </div>
 
     </div>
     <div id="corps-game-block-right">
-      <?php include('include/gameLI.php'); ?>
+      <?php
+        include('include/gameLI.php');
+      ?>
     </div>
 
+    <script>
+    $('#header').resize(function(){
+      var w = $('#header').width();
+      if(w < 130)
+        {
+          $('#header').show();
+        }
+        if(w >= 130)
+          {
+            $('#header').hide();
+          }
+        });
+    </script>
 
   </div>
 
